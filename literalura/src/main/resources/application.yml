@@ -1,3 +1,6 @@
+server:
+    port: ${APP_PORT:9090}
+
 spring:
     application:
         name: literalura

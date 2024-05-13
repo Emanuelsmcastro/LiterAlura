@@ -1,0 +1,18 @@
+services:
+  mysql_literalura:
+    container_name: mysql_literalura
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=test
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_TCP_PORT=3306
+    ports:
+      - "3311:3306"
+    networks:
+      - literalura-network
+
+networks:
+  literalura-network:
+    driver: bridge
